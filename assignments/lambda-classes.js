@@ -43,7 +43,7 @@ class Student extends Person {
 
     // method that logs out all of the student's favoriteSubjects one by one.
     listsSubjects() {
-        this.favSubjects.map(item => console.log(item));
+        return `My favorite subjects are ${this.favSubjects}.`;
     }
 
     PRAssignment(subject) {
@@ -159,7 +159,6 @@ console.log(dan.grade(dan, 'UI/UX'));
 // Student
 
 
-
 const cobrettie = new Student({
     name: 'Cobrettie',
     age: 24,
@@ -169,11 +168,47 @@ const cobrettie = new Student({
     specialty: 'Full-Stack',
     previousBackground: 'Park Ranger',
     className: 'WEBPT6',
-    favSubjects: 'Computer Science, AI, Software Engineering',
+    favSubjects: ['Computer Science, AI, Software Engineering']
 });
 
 
 // console.log(cobrettie);
-// console.log(cobrettie.listsSubjects()); ----- still need to get working
+console.log(cobrettie.listsSubjects());
 console.log(cobrettie.PRAssignment('JavaScript-IV'));
 console.log(cobrettie.sprintChallenge('JavaScript-IV'));
+
+
+const lynn = new Student({
+    name: 'Lynn',
+    age: 25,
+    location: 'Florida',
+    gender: 'female',
+    favLanguage: 'CSS',
+    specialty: 'Photography',
+    previousBackground: 'Sweetheart Photographer',
+    className: 'Garner Full-Stack 1',
+    favSubjects: [`Garner's course, HTML, CSS, Design, Blogging, Traveling, Photography`]
+});
+
+// console.log(lynn);
+console.log(lynn.listsSubjects());
+console.log(lynn.PRAssignment('Photography 101'));
+console.log(lynn.sprintChallenge('Photography'));
+
+
+const john = new Student({
+    name: 'John',
+    age: 24,
+    location: 'Orlando',
+    gender: 'male',
+    favLanguage: 'Soccer',
+    specialty: 'Fifa',
+    previousBackground: 'Accountant',
+    className: 'Fifa 19',
+    favSubjects: ['Fifa, Madden, Rocket League, Call Of Duty']
+});
+
+// console.log(john);
+console.log(john.listsSubjects());
+console.log(john.PRAssignment('Fifa 19'));
+console.log(john.sprintChallenge('Fifa'));
